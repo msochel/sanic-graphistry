@@ -23,7 +23,7 @@ async def start(request):
 
 @app.route("/query", methods=['POST', 'GET'])
 async def query(request):
-    if request.method == "POST":
+    if request.method == "GET":
         req_file = request.files.get("file")
         body = req_file.body.decode("unicode_escape")
         graph = ig.read(body, format="graphml")
