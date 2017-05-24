@@ -4,6 +4,7 @@ from sanic.response import html, redirect, text
 from jinja2 import Environment, PackageLoader
 import graphistry
 import igraph as ig
+import os
 
 graphistry.register(
     key='77ab9bcccd62c6bcf10ed37fb759fa849cd9bb1157cff17260da05e9e898d6ba'
@@ -59,8 +60,13 @@ async def query(request):
 
 
 if __name__ == "__main__":
-    app.run(
-        debug=True,
-        host="0.0.0.0",
+    heroku = True
+    if not heroku:
         port=8000
+    else:
+        port=int(os.environ['PORT'])
+    app.run(
+        debug=False,
+        host="0.0.0.0",
+        port=port
     )
