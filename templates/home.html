@@ -1,14 +1,20 @@
 <html>
    <head>
-      <title>Graph view</title>
+      <title>Profile</title>
         <meta http-equiv='Content-Type' content='text/html' charset="UTF-8">
+      <link
+         rel="stylesheet"
+         type="text/css"
+         href="/static/css/style.css"
+      >
    </head>
-   <body>
-      <div id="login">
-         <form action=/uploads enctype="multipart/form-data" method="post">
-            <input type="file" id="file" name="file"/><br>
-            <input type="submit" value="Enviar"/>
-         </form>
-      </div>
-   </body>
-</html>
+<div class="container">
+  <form id="contact" action=/uploads enctype="multipart/form-data" method="post">
+    <h3>View Graph</h3>
+    <fieldset>
+      <input input type="file" id="file" name="file">
+    </fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+    </fieldset>
+  </form>
+</div>
