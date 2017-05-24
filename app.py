@@ -24,7 +24,7 @@ async def start(request):
     return html(html_content)
 
 
-@app.route("/query", methods=['POST', 'GET'])
+@app.route("/uploads", methods=['POST', 'GET'])
 async def query(request):
     req_file = request.files.get("file")
     file_name = req_file.name
