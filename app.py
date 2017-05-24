@@ -14,6 +14,7 @@ env = Environment(
 )
 
 app = Sanic(__name__)
+app.static("/static", "./static")
 
 
 @app.route("/")
