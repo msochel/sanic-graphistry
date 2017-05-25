@@ -18,45 +18,46 @@ app = Sanic(__name__)
 app.static("/static", "./static")
 
 
-@app.route("/")
+@app.route("/", methods=["POST", "GET"])
 async def start(request):
-    template = env.get_template("home.html")
-    html_content = template.render()
-    return html(html_content)
+    if request.method == "POST":
+        req_file = request.files.get("file")
+        file_name = req_file.name
+        body = req_file.body.decode("unicode_escape")
+        with open("files/" + file_name, "w+") as file:
+            file.write(body)
+        file_path = "files/" + file_name
+        graph = ig.read(file_path, format="graphml")
+        colors = {
+                    "#3217A7":10008,
+                    "#F0F007": 205005,
+                    "White":163001,
+                    "#9725A4":135007,
+                    "#000000": 164010,
+                    "#156911":189010,
+                    '#A71717':157000
+                }
+        for pos, x in enumerate(graph.vs['color']):
+            graph.vs[pos]['color'] = colors[x]
 
+        for pos, x in enumerate(graph.es['color']):
+            graph.es[pos]['color'] = colors[x]
 
-@app.route("/uploads", methods=['POST', 'GET'])
-async def query(request):
-    req_file = request.files.get("file")
-    file_name = req_file.name
-    body = req_file.body.decode("unicode_escape")
-    with open("files/" + file_name, "w+") as file:
-        file.write(body)
-    file_path = "files/" + file_name
-    graph = ig.read(file_path, format="graphml")
-    colors = {
-                "#3217A7":10008,
-                "#F0F007": 205005,
-                "White":163001,
-                "#9725A4":135007,
-                "#000000": 164010,
-                "#156911":189010,
-                '#A71717':157000
-            }
-    for pos, x in enumerate(graph.vs['color']):
-        graph.vs[pos]['color'] = colors[x]
+        url = graphistry.bind(
+                    source='src',
+                    destination='dst',
+                    point_color='color',
+                    edge_color='color'
+                ).plot(graph)
+        print(type(url))
 
-    for pos, x in enumerate(graph.es['color']):
-        graph.es[pos]['color'] = colors[x]
-
-    return redirect(
-        graphistry.bind(
-            source='src',
-            destination='dst',
-            point_color='color',
-            edge_color='color'
-        ).plot(graph)
-    )
+        view = env.get_template("home.html")
+        html_content = view.render(url=url)
+        return html(html_content)
+    elif request.method == "GET":
+        template = env.get_template("home.html")
+        html_content = template.render(url="null")
+        return html(html_content)
 
 
 if __name__ == "__main__":

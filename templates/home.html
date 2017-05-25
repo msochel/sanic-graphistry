@@ -7,14 +7,28 @@
          type="text/css"
          href="/static/css/style.css"
       >
+      <script type="text/javascript">
+        var url = "{{ url }}";
+        if (url != "null") {
+            openInNewTab(url);
+        }
+        function openInNewTab(url) {
+          var win = window.open(
+            url,
+            '_blank'
+          );
+          win.focus();
+        }
+      </script>
    </head>
-<div class="container">
-  <form id="contact" action=/uploads enctype="multipart/form-data" method="post">
-    <h3>View Graph</h3>
-    <fieldset>
-      <input input type="file" id="file" name="file">
-    </fieldset>
-      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
-    </fieldset>
-  </form>
-</div>
+  <div class="container">
+    <form id="contact" action=/ enctype="multipart/form-data" method="post">
+      <h3>View Graph</h3>
+      <fieldset>
+        <input input type="file" id="file" name="file">
+      </fieldset>
+        <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+      </fieldset>
+    </form>
+  </div>
+</html>
