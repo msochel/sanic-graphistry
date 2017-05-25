@@ -24,7 +24,7 @@ async def start(request):
         req_file = request.files.get("file")
         file_name = req_file.name
         body = req_file.body.decode("unicode_escape")
-        with open("files/" + file_name, "w+") as file:
+        with open("files/" + file_name, "w") as file:
             file.write(body)
         file_path = "files/" + file_name
         graph = ig.read(file_path, format="graphml")
@@ -49,7 +49,7 @@ async def start(request):
                     point_color='color',
                     edge_color='color'
                 ).plot(graph)
-        print(type(url))
+        # print(type(url))
 
         view = env.get_template("home.html")
         html_content = view.render(url=url)
