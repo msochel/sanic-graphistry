@@ -35,7 +35,8 @@ async def start(request):
                     "#9725A4":135007,
                     "#000000": 164010,
                     "#156911":189010,
-                    '#A71717':157000
+                    '#A71717':157000,
+                    "#2E2E2E": 164009,
                 }
         for pos, x in enumerate(graph.vs['color']):
             graph.vs[pos]['color'] = colors[x]
