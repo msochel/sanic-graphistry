@@ -52,6 +52,8 @@ async def start(request):
                         edge_color='color'
                     ).plot(graph)
             # print(type(url))
+            view = env.get_template("home.html")
+            html_content = view.render(url=url)
 
         view = env.get_template("home.html")
         html_content = view.render(url="null")
