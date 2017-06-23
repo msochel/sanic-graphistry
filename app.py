@@ -69,7 +69,7 @@ async def start(request):
 
 
 if __name__ == "__main__":
-    heroku = False
+    heroku = True
     if not heroku:
         port=8000
     else:
