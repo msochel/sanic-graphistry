@@ -21,9 +21,11 @@ app.static("/static", "./static")
 @app.route("/", methods=["POST", "GET"])
 async def start(request):
     if request.method == "POST":
+        hola = list()
         req_file = request.files.getlist("file")
         for file_ in req_file:
             file_name = file_.name
+            print(file_name)
             body = file_.body.decode("unicode_escape")
             with open("files/" + file_name, "w") as file:
                 file.write(body)
@@ -54,10 +56,13 @@ async def start(request):
             # print(type(url))
             view = env.get_template("home.html")
             html_content = view.render(url=url)
+            hola.append(html_content)
 
-        view = env.get_template("home.html")
-        html_content = view.render(url="null")
-        return html(html_content)
+        # view = env.get_template("home.html")
+        # html_content = view.render(url="null")
+        # return html(html_content)
+        hola.append(view.render(url="null"))
+        return html(hola[0], hola[1], hola[2])
     elif request.method == "GET":
         template = env.get_template("home.html")
         html_content = template.render(url="null")
