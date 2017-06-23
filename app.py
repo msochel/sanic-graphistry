@@ -53,7 +53,7 @@ async def start(request):
         # print(type(url))
 
         view = env.get_template("home.html")
-        html_content = view.render(url=url)
+        html_content = view.render(url='null')
         return html(html_content)
     elif request.method == "GET":
         template = env.get_template("home.html")
