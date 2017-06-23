@@ -53,9 +53,9 @@ async def start(request):
                     ).plot(graph)
             # print(type(url))
 
-        view = env.get_template("home.html")
-        html_content = view.render(url="null")
-        return html(html_content)
+            view = env.get_template("home.html")
+            html_content = view.render(url=url)
+            return html(html_content)
     elif request.method == "GET":
         template = env.get_template("home.html")
         html_content = template.render(url="null")

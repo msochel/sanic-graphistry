@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+         http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<!-- Created by igraph -->
+  <key id="v_color" for="node" attr.name="color" attr.type="string"/>
+  <key id="v_time" for="node" attr.name="time" attr.type="double"/>
+  <key id="e_color" for="edge" attr.name="color" attr.type="string"/>
+  <graph id="G" edgedefault="directed">
+    <node id="n0">
+      <data key="v_color">#A71717</data>
+      <data key="v_time">9</data>
+    </node>
+    <node id="n1">
+      <data key="v_color">#A71717</data>
+      <data key="v_time">9</data>
+    </node>
+    <node id="n2">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n3">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n4">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n5">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n6">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n7">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n8">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n9">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n10">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n11">
+      <data key="v_color">#A71717</data>
+      <data key="v_time">9</data>
+    </node>
+    <node id="n12">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n13">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n14">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n15">
+      <data key="v_color">#A71717</data>
+      <data key="v_time">9</data>
+    </node>
+    <node id="n16">
+      <data key="v_color">#A71717</data>
+      <data key="v_time">9</data>
+    </node>
+    <node id="n17">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n18">
+      <data key="v_color">#A71717</data>
+      <data key="v_time">9</data>
+    </node>
+    <node id="n19">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n20">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n21">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n22">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n23">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n24">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n25">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n26">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n27">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n28">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n29">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n30">
+      <data key="v_color">#A71717</data>
+      <data key="v_time">9</data>
+    </node>
+    <node id="n31">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n32">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n33">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n34">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n35">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n36">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n37">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n38">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n39">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n40">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n41">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n42">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n43">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n44">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n45">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n46">
+      <data key="v_color">#A71717</data>
+      <data key="v_time">9</data>
+    </node>
+    <node id="n47">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n48">
+      <data key="v_color">#156911</data>
+    </node>
+    <node id="n49">
+      <data key="v_color">#156911</data>
+    </node>
+    <edge source="n0" target="n2">
+      <data key="e_color">#2E2E2E</data>
+    </edge>
+    <edge source="n1" target="n2">
+      <data key="e_color">#2E2E2E</data>
+    </edge>
+    <edge source="n11" target="n2">
+      <data key="e_color">#2E2E2E</data>
+    </edge>
+    <edge source="n15" target="n2">
+      <data key="e_color">#2E2E2E</data>
+    </edge>
+    <edge source="n16" target="n2">
+      <data key="e_color">#2E2E2E</data>
+    </edge>
+    <edge source="n18" target="n2">
+      <data key="e_color">#2E2E2E</data>
+    </edge>
+    <edge source="n30" target="n2">
+      <data key="e_color">#2E2E2E</data>
+    </edge>
+    <edge source="n46" target="n2">
+      <data key="e_color">#2E2E2E</data>
+    </edge>
+  </graph>
+</graphml>
