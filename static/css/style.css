@@ -23,11 +23,11 @@ body {
   background-attachment: fixed;
   background-position: center;
   margin-top: -20px;
-	padding-top: 150px;
-	background-attachment: relative;
-	background-position: center center;
-	min-height: 650px;
-	width: 100%;
+  padding-top: 150px;
+  background-attachment: relative;
+  background-position: center center;
+  min-height: 650px;
+  width: 100%;
 
   -webkit-background-size: 100%;
   -moz-background-size: 100%;

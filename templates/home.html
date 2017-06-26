@@ -8,16 +8,18 @@
          href="/static/css/style.css"
       >
       <script type="text/javascript">
-        var url = "{{ url }}";
-        if (url != "null") {
+        var url = "{{ pages }}";
+        if (url instanceof Array) {
             openInNewTab(url);
         }
         function openInNewTab(url) {
+          for (i = 0; i < url.length; i++) {
           var win = window.open(
-            url,
+            url[i],
             '_blank'
           );
-          win.focus();
+          win.focus();            
+          }
         }
       </script>
    </head>
