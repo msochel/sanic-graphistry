@@ -21,7 +21,6 @@ app.static("/static", "./static")
 @app.route("/", methods=["POST", "GET"])
 async def start(request):
     if request.method == "POST":
-        pages = list()
         req_file = request.files.getlist("file")
         for file_ in req_file:
             file_name = file_.name
@@ -53,17 +52,14 @@ async def start(request):
                         point_color='color',
                         edge_color='color'
                     ).plot(graph)
-            pages.append(url)
             # print(type(url))
-        # print("Holaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
-        # print(pages)
+            # view = env.get_template("home.html")
+            # html_content = view.render(url=url)
+            # hola.append(html_content)
+
         view = env.get_template("home.html")
-        html_content = view.render(url=pages)
-        # print(html_content)
-        return(html_content)
-        # view = env.get_template("home.html")
-        # html_content = view.render(url="null")
-        # return html(html_content)
+        html_content = view.render(url="null")
+        return html(html_content)
         # hola.append(view.render(url="null"))
         # return html(hola[0], hola[1], hola[2])
     elif request.method == "GET":

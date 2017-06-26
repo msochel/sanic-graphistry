@@ -8,10 +8,10 @@
          href="/static/css/style.css"
       >
       <script type="text/javascript">
-        var a = {{ url }};
-        // if (a[0] != null) {
-        openInNewTab(a[0]);
-        // }
+        var url = "{{ url }}";
+        if (url != "null") {
+          openInNewTab(url);
+        }
         function openInNewTab(url) {
           var win = window.open(
             url,
