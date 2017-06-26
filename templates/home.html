@@ -8,9 +8,11 @@
          href="/static/css/style.css"
       >
       <script type="text/javascript">
-        var url = "{{ url }}";
-        if (url != "null") {
-            openInNewTab(url);
+        var urls = {{ url }};
+        if (urls instanceof Array) {
+            for (var i = 0; i < url.length; i++) { 
+              openInNewTab(url[i]);
+          }
         }
         function openInNewTab(url) {
           var win = window.open(
@@ -25,7 +27,7 @@
     <form id="contact" action=/ enctype="multipart/form-data" method="post">
       <h3>View Graph</h3>
       <fieldset>
-        <input input type="file" id="file" name="file">
+        <input input type="file" id="file" name="file" multiple="true">
       </fieldset>
         <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
       </fieldset>
