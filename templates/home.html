@@ -10,8 +10,8 @@
       <script type="text/javascript">
         var urls = {{ url }};
         if (urls instanceof Array) {
-            for (var i = 0; i < url.length; i++) { 
-              openInNewTab(url[i]);
+            for (var i = 0; i < urls.length; i++) { 
+              openInNewTab(urls[i]);
           }
         }
         function openInNewTab(url) {
