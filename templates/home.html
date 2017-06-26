@@ -10,15 +10,14 @@
       <script type="text/javascript">
         var url = "{{ url }}";
         if (url != "null") {
-          openInNewTab(url);
+            openInNewTab(url);
         }
         function openInNewTab(url) {
           var win = window.open(
             url,
             '_blank'
           );
-          win.focus();            
-          }
+          win.focus();
         }
       </script>
    </head>
@@ -31,8 +30,4 @@
         <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
       </fieldset>
     </form>
-    <footer>
-      <div id="text-author">Luz Stella Cardona Meza</div>
-    </footer>
   </div>
-</html>
