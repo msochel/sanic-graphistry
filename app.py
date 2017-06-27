@@ -54,21 +54,17 @@ async def start(request):
                         edge_color='color'
                     ).plot(graph)
             pages.append(url)
-            # print(type(url))
-        # print(pages)
         view = env.get_template("home.html")
         html_content = view.render(url=pages)
-        # print(html_content)
         return html(html_content)
     elif request.method == "GET":
-        print("Hola")
         template = env.get_template("home.html")
         html_content = template.render(url="null")
         return html(html_content)
 
 
 if __name__ == "__main__":
-    heroku = True
+    heroku = False
     if not heroku:
         port=8000
     else:
